@@ -1,18 +1,26 @@
 package Clase3;
+import java.util.ArrayList;
 
-public class Ejercicio1 {
+public class Ejercicio1_A {
 
     public static void main(String[] args) {
-        metodo("Palabra", 'a');
+
+        metodoCalcular("Hola mundo", 'd');
+
+        metodoCalcular("El arte desafia a la tecnologia y la tecnologia desafia al arte", 'a');
+
     }
 
-    public static void metodo(String str, char ch) {
-        System.out.println("La letra indicada se encuentra en: ");
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ch) {
-                System.out.println("Posicion: " + str.indexOf(ch, i));
+    public static void metodoCalcular(String texto, char letra) {
+        int count = 0;
+        ArrayList<Integer> posicionChar = new ArrayList<>();
+        for (int i = 0; i < texto.length(); i++) {
+            if (texto.charAt(i) == letra) {
+                posicionChar.add(texto.indexOf(letra, i));
+                count++;
             }
         }
-        System.out.println("En total la letra '" + ch + "' se repite: " + str + " veces. En la cadena de texto: " + str);
+        System.out.println("La letra '" + letra + "' se repite: " + count + " veces. En la cadena de texto: '" + texto + "'");
+        System.out.println("Posicion: " + posicionChar);
     }
 }
