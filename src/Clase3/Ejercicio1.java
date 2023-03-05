@@ -5,10 +5,15 @@ public class Ejercicio1_A {
 
     public static void main(String[] args) {
 
+        // A
         metodoCalcular("Hola mundo", 'd');
-
         metodoCalcular("El arte desafia a la tecnologia y la tecnologia desafia al arte", 'a');
 
+        // B
+
+
+        
+        // C
     }
 
     public static void metodoCalcular(String texto, char letra) {
