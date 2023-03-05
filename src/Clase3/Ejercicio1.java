@@ -9,11 +9,9 @@ public class Ejercicio1 {
         // Salida A
         metodoCalcular("El arte desafía a la tecnología y la tecnología desafía al arte", 'a');
         System.out.println("\n");
-
         // Salida B
         ordenarNumeros(83, 11, 25);
         System.out.println("\n");
-
         // Salida C
         main1(20);
     }
@@ -32,7 +30,6 @@ public class Ejercicio1 {
         System.out.println("Posicion: " + posicionChar);
     }
 
-
     /***************** método B ****************************/
     public static void ordenarNumeros(int num1, int num2, int num3) {
         int[] vectorNumeros = new int[3];
@@ -44,7 +41,6 @@ public class Ejercicio1 {
         Arrays.sort(vectorNumeros);
         System.out.println("Se obtuvo el siguiente array con los numeros ordenados de menor a mayor: \n" + Arrays.toString(vectorNumeros));
     }
-
 
     /***************** método C ****************************/
     public static void main1(int x) {
