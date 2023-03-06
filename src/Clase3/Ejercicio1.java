@@ -9,9 +9,11 @@ public class Ejercicio1 {
         // Salida A
         metodoCalcular("El arte desafía a la tecnología y la tecnología desafía al arte", 'a');
         System.out.println("\n");
+
         // Salida B
         ordenarNumeros(83, 11, 25);
         System.out.println("\n");
+
         // Salida C
         main1(20);
     }
