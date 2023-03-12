@@ -35,12 +35,18 @@ public class Ejercicio1 {
     /***************** método B ****************************/
     public static void ordenarNumeros(int num1, int num2, int num3) {
         int[] vectorNumeros = new int[3];
+        vectorNumeros[0] = num1;
+        vectorNumeros[1] = num2;
+        vectorNumeros[2] = num3;
         for (int i = 0; i < vectorNumeros.length; i++) {
-            vectorNumeros[0] = num1;
-            vectorNumeros[1] = num2;
-            vectorNumeros[2] = num3;
+            for (int j = 0; j < vectorNumeros.length; j++) {
+                if (vectorNumeros[i] < vectorNumeros[j]) {
+                    int comparar = vectorNumeros[i];
+                    vectorNumeros[i] = vectorNumeros[j];
+                    vectorNumeros[j] = comparar;
+                }
+            }
         }
-        Arrays.sort(vectorNumeros);
         System.out.println("Se obtuvo el siguiente array con los numeros ordenados de menor a mayor: \n" + Arrays.toString(vectorNumeros));
     }
 
@@ -48,9 +54,9 @@ public class Ejercicio1 {
     public static void main1(int x) {
         int[] vectorNumeros = {5, 9, 15, 21, 44, 62};
         int suma = 0;
-        for (int i = 0; i < vectorNumeros.length; i++) {
-            if (vectorNumeros[i] > x) {
-                suma += vectorNumeros[i];
+        for (int vectorNumero : vectorNumeros) {
+            if (vectorNumero > x) {
+                suma += vectorNumero;
             }
         }
         System.out.println("La suma de los elementos del array mayores a " + x + " es de: " + suma);
