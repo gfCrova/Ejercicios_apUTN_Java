@@ -2,7 +2,7 @@ package Clase3;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Ejercicio1 {
+public class Ejercicio1_clase3 {
 
     public static void main(String[] args) {
 
