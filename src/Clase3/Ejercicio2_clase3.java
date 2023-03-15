@@ -1,6 +1,6 @@
 package Clase3;
 
-public class Ejercicio2 {
+public class Ejercicio2_clase3 {
 
     public static void main(String[] args) {
         convertirString("Hola que tal", 1);
