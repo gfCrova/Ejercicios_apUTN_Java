@@ -4,7 +4,7 @@ import java.util.*;
 
 import static java.util.Collections.sort;
 
-public class Ejercicio1_clase4 {
+public class Ejercicio1 {
 
     public static void main(String[] args) {
 

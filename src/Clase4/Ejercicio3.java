@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 
-public class Ejercicio3_clase4 {
+public class Ejercicio3 {
 
     public static void main(String[] args) throws IOException {
 
