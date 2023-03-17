@@ -27,5 +27,8 @@ public class Main {
         }
         System.out.println("Importe Total: ");
         System.out.println(carrito.calcularTotal());
+
+        System.out.println("Importe Total con Descuento: ");
+        System.out.println(desc.calcularDescuento(carrito, 15));
     }
 }
