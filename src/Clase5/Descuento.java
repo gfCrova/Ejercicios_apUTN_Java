@@ -2,8 +2,6 @@ package Clase5;
 
 public class Descuento {
 
-    private double valorDescuento;
-
     public Descuento() {
     }
 
