@@ -20,16 +20,13 @@ public class Ejercicio1_clase3 {
 
     /***************** método A ****************************/
     public static void metodoCalcular(String texto, char letra) {
-        int count = 0;
-        ArrayList<Integer> posicionChar = new ArrayList<>();
-        for (int i = 0; i < texto.length(); i++) {
-            if (texto.charAt(i) == letra) {
-                posicionChar.add(texto.indexOf(letra, i));
-                count++;
-            }
+        int count = 0, posicion = 0;
+        posicion = texto.indexOf(letra);
+        while(posicion != -1) {
+            posicion = texto.indexOf(letra, posicion + 1);
+            count++;
         }
         System.out.println("La letra '" + letra + "' se repite: " + count + " veces. En la cadena de texto: '" + texto + "'");
-        System.out.println("Posicion: " + posicionChar);
     }
 
     /***************** método B ****************************/
