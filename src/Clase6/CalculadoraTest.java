@@ -1,9 +1,6 @@
 package Clase6;
 
-import Clase6.Ejemplo.ItemCompra;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculadoraTest {
