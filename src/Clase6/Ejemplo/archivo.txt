@@ -1,2 +1,0 @@
-Asado;1;2500
-Ensalada;3;800
