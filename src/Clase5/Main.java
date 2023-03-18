@@ -9,7 +9,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Carrito carrito = new Carrito();
-        Descuento desc = new Descuento();
+        Descuento alContado = new DescuentoPagoAlContado();
+        Descuento porDiscapacidad = new DescuentoPagoConDebito();
 
         int i = 0;
         String archivo = "src\\Clase5\\archivo.txt";
@@ -28,7 +29,10 @@ public class Main {
         System.out.println("Importe Total: ");
         System.out.println(carrito.calcularTotal());
 
-        System.out.println("Importe Total con Descuento: ");
-        System.out.println(desc.calcularDescuento(carrito, 15));
+        System.out.println("Total con descuento del 12.5% por pago al Contado: ");
+        System.out.println(alContado.calcularDescuento(carrito));
+
+        System.out.println("Total con descuento del 15% por pago con tarjeta de debito: ");
+        System.out.println(porDiscapacidad.calcularDescuento(carrito));
     }
 }

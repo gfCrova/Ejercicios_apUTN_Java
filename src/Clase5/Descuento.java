@@ -1,13 +1,31 @@
 package Clase5;
 
-public class Descuento {
+public abstract class Descuento {
+
+    private Carrito carrito;
+    private double valorDescuento;
 
     public Descuento() {
     }
 
-    public double calcularDescuento(Carrito carrito, double valorDescuento) {
-        double getTotal = carrito.calcularTotal();
-        double resultDescuento = (getTotal * valorDescuento) / 100;
-        return getTotal -= resultDescuento;
+    public Descuento(Carrito carrito, double valorDescuento) {
+        this.carrito = carrito;
+        this.valorDescuento = valorDescuento;
     }
+
+    public Carrito getCarrito() {
+        return carrito;
+    }
+
+    public void setCarrito(Carrito carrito) {
+        this.carrito = carrito;
+    }
+
+    public abstract double getValorDescuento();
+
+    public void setValorDescuento(double valorDescuento) {
+        this.valorDescuento = valorDescuento;
+    }
+
+    public abstract double calcularDescuento(Carrito carrito);
 }
