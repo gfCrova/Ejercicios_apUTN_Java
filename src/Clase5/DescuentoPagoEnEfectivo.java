@@ -1,16 +1,16 @@
 package Clase5;
 
-public class DescuentoPagoAlContado extends Descuento{
+public class DescuentoPagoEnEfectivo extends Descuento{
 
-    private final double valorDescuentoAlContado = 12.5;
+    private final double valorDescuentoEfectivo = 12.5;
 
     @Override
     public double getValorDescuento() {
-        return this.valorDescuentoAlContado;
+        return this.valorDescuentoEfectivo;
     }
     @Override
     public void setValorDescuento(double valorDescuentoAlContado) {
-        super.setValorDescuento(this.valorDescuentoAlContado);
+        super.setValorDescuento(this.valorDescuentoEfectivo);
     }
 
     @Override
