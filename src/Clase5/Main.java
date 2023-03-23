@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Carrito carrito = new Carrito();
-        Descuento pagoEnEfectivo = new DescuentoPagoEnEfectivo();
-        Descuento pagoConDebito = new DescuentoPagoConDebito();
+        Descuento descFijo = new DescuentoFijo(25);
+        Descuento descPorcentaje = new DescuentoPorcentaje(30);
 
         int i = 0;
         String archivo = "src\\Clase5\\archivo.txt";
@@ -26,13 +26,11 @@ public class Main {
             carrito.getItem()[i] = itemsDeCarrito;
             i++;
         }
-        System.out.println("Importe Total: ");
-        System.out.println(carrito.calcularTotal());
 
-        System.out.println("Total con descuento del 12.5% por pago al Contado: ");
-        System.out.println(pagoEnEfectivo.calcularDescuento(carrito));
+        System.out.println("Importe Total: $" + carrito.calcularTotal());
 
-        System.out.println("Total con descuento del 15% por pago con tarjeta de debito: ");
-        System.out.println(pagoConDebito.calcularDescuento(carrito));
+        System.out.println("Importe Total con descuento FIJO de ($" + descFijo.getValorDescuento() + ") es: $" + descFijo.calcularDescuento(carrito));
+
+        System.out.println("Importe Total con -" + descPorcentaje.getValorDescuento() + "% de descuento es: $" + descPorcentaje.calcularDescuento(carrito));
     }
 }
