@@ -21,7 +21,7 @@ class CalculadoraTest {
     }
 
     @org.junit.jupiter.api.Test
-    public void restar() {
+    public void testRestar() {
         double restar = calculadoraTest.restar(90, 50);
         double restaMultiplicada = restar * 15;
         double resultadoEsperado = 605;
@@ -31,7 +31,7 @@ class CalculadoraTest {
     }
 
     @org.junit.jupiter.api.Test
-    public void multiplicar() {
+    public void testMultiplicar() {
         double multiplicacion = calculadoraTest.multiplicar(80, 3);
         double resultadoEsperado = 240;
 
