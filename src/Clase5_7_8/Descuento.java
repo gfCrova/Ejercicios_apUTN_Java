@@ -1,16 +1,14 @@
-package Clase5;
+package Clase5_7;
 
 public abstract class Descuento {
 
     private Carrito carrito;
-    private double valorDescuento;
 
     public Descuento() {
     }
 
-    public Descuento(Carrito carrito, double valorDescuento) {
+    public Descuento(Carrito carrito) {
         this.carrito = carrito;
-        this.valorDescuento = valorDescuento;
     }
 
     public Carrito getCarrito() {
@@ -23,9 +21,7 @@ public abstract class Descuento {
 
     public abstract double getValorDescuento();
 
-    public void setValorDescuento(double valorDescuento) {
-        this.valorDescuento = valorDescuento;
-    }
+    public abstract void setValorDescuento(double valorDescuento);
 
     public abstract double calcularDescuento(Carrito carrito);
 }
