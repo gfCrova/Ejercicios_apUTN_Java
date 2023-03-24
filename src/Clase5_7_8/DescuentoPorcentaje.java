@@ -1,4 +1,4 @@
-package Clase5_7;
+package Clase5_7_8;
 
 public class DescuentoPorcentaje extends Descuento{
 
