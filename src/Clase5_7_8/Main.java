@@ -1,4 +1,4 @@
-package Clase5_7;
+package Clase5_7_8;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Importe Total: $" + carrito.calcularTotal() + "\n");
 
         DescuentoFijo descFijo = new DescuentoFijo(25);
-        System.out.println("Con Descuento FIJO de $ " + descFijo.getValorDescuento());
+        System.out.println("Con Descuento Fijo de $ " + descFijo.getValorDescuento());
         System.out.println("Importe Total es: $" + descFijo.calcularDescuento(carrito) + "\n");
 
         DescuentoPorcentaje descPorcentaje = new DescuentoPorcentaje(15);
