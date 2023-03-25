@@ -2,17 +2,22 @@ package Clase5_7_8.test;
 
 import Clase5_7_8.*;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestDescuentos {
 
     Carrito carrito;
-    ItemCarrito[] items = new ItemCarrito[3];
     DescuentoFijo descuento;
     DescuentoPorcentaje descuento2;
     DescuentoPorcentajeConTope descuento3;
 
     public void crearCarrito(){
+        ArrayList<ItemCarrito> items = new ArrayList<>();
+
         carrito = new Carrito(items);
 
         Producto producto1 = new Producto("Product1", 1500);
@@ -23,9 +28,9 @@ public class TestDescuentos {
         ItemCarrito item2 = new ItemCarrito(producto2, 3);
         ItemCarrito item3 = new ItemCarrito(producto3, 45);
 
-        items[0] = item1;
-        items[1] = item2;
-        items[2] = item3;
+        items.add(item1);
+        items.add(item2);
+        items.add(item3);
     }
 
     @org.junit.jupiter.api.Test
