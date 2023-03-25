@@ -1,5 +1,8 @@
 package Clase5_7_8;
 
+import Clase5_7_8.exceptions.NoValorCero;
+import Clase5_7_8.exceptions.NoValorNegativo;
+
 public class DescuentoPorcentajeConTope extends Descuento {
 
     private double valorDescuento;
@@ -32,6 +35,11 @@ public class DescuentoPorcentajeConTope extends Descuento {
     @Override
     public double calcularDescuento(Carrito carrito) {
         double getTotal = carrito.calcularTotal();
+        if (getTotal == 0) {
+            throw new NoValorCero();
+        } if (getTotal - getValorDescuento() < 0) {
+            throw new NoValorNegativo();
+        }
         double calculoTope = (getTotal * getValorTope() / 100);
         double calculoDescuento = (getTotal * getValorDescuento() / 100);
         if((getTotal * getValorDescuento() / 100) > getValorTope()) {
