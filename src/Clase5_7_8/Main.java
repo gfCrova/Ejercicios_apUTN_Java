@@ -12,7 +12,7 @@ public class Main {
 
         try {
             int i = 0;
-            String archivo = "src\\Clase5_7_8\\archivo.txt";
+            String archivo = "src\\Clase5_7_8\\archivo.csv";
             for (String linea : Files.readAllLines(Paths.get(archivo))) {
                 System.out.println(linea);
                 String nombre = linea.split("; ")[0];
