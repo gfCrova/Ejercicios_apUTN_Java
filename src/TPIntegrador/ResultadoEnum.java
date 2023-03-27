@@ -1,4 +1,7 @@
 package TPIntegrador;
 
-public class ResultadoEnum {
+public enum ResultadoEnum {
+    GANADOR, PERDEDOR, EMPATE;
+
+    ResultadoEnum() {}
 }

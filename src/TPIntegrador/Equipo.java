@@ -3,6 +3,7 @@ package TPIntegrador;
 public class Equipo {
     private String nombre;
     private String descripcion;
+    private int cantidadGoles;
 
     public Equipo() {
     }
@@ -26,5 +27,13 @@ public class Equipo {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public int getCantidadGoles() {
+        return cantidadGoles;
+    }
+
+    public void setCantidadGoles(int cantidadGoles) {
+        this.cantidadGoles = cantidadGoles;
     }
 }
