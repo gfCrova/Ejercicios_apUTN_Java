@@ -15,9 +15,9 @@ public class Main {
             String archivo = "src\\Clase5_7_8\\archivo.csv";
             for (String linea : Files.readAllLines(Paths.get(archivo))) {
                 System.out.println(linea);
-                String nombre = linea.split("; ")[0];
-                int cantidad = Integer.parseInt(linea.split("; ")[1]);
-                double precio = Integer.parseInt(linea.split("; ")[2]);
+                String nombre = linea.split(", ")[0];
+                int cantidad = Integer.parseInt(linea.split(", ")[1]);
+                double precio = Integer.parseInt(linea.split(", ")[2]);
 
                 Producto producto = new Producto(nombre, precio);
                 ItemCarrito itemsDeCarrito = new ItemCarrito(producto, cantidad);
