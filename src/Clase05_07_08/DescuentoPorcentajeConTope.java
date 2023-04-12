@@ -1,7 +1,7 @@
-package Clase5_7_8;
+package Clase05_07_08;
 
-import Clase5_7_8.exceptions.NoValorCero;
-import Clase5_7_8.exceptions.NoValorNegativo;
+import Clase05_07_08.exceptions.NoValorCero;
+import Clase05_07_08.exceptions.NoValorNegativo;
 
 public class DescuentoPorcentajeConTope extends Descuento {
 

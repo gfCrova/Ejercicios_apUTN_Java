@@ -1,9 +1,8 @@
-package Clase5_7_8.test;
+package Clase05_07_08.test;
 
-import Clase5_7_8.Carrito;
-import Clase5_7_8.ItemCarrito;
-import Clase5_7_8.Producto;
-import org.junit.jupiter.api.BeforeEach;
+import Clase05_07_08.Carrito;
+import Clase05_07_08.ItemCarrito;
+import Clase05_07_08.Producto;
 
 import java.util.ArrayList;
 

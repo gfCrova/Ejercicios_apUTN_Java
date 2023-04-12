@@ -2,7 +2,7 @@
   <artifact type="jar" name="Clase9:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Clase9_jar</output-path>
     <root id="archive" name="Clase9.jar">
-      <element id="module-output" name="Clase9" />
+      <element id="module-output" name="Clase09" />
     </root>
   </artifact>
 </component>

@@ -1,8 +1,8 @@
-package Clase5_7_8.test;
+package Clase05_07_08.test;
 
-import Clase5_7_8.*;
-import Clase5_7_8.exceptions.NoValorCero;
-import Clase5_7_8.exceptions.NoValorNegativo;
+import Clase05_07_08.*;
+import Clase05_07_08.exceptions.NoValorCero;
+import Clase05_07_08.exceptions.NoValorNegativo;
 import org.junit.Test;
 
 import java.io.IOException;

@@ -1,5 +1,4 @@
-package Clase3;
-import java.util.ArrayList;
+package Clase03;
 import java.util.Arrays;
 
 public class Ejercicio1_clase3 {

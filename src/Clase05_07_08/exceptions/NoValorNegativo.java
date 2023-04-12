@@ -1,9 +1,8 @@
-package Clase5_7_8.exceptions;
+package Clase05_07_08.exceptions;
 
-public class NoValorCero extends RuntimeException{
-
-    public NoValorCero() {
-        System.out.println("No es posible aplicar un descuento a un monto equivalente a 0");
+public class NoValorNegativo extends RuntimeException{
+    public NoValorNegativo() {
+        System.out.println("No es posible aplicar un descuento a un monto NEGATIVO");
         printStackTrace();
     }
 
@@ -15,7 +14,7 @@ public class NoValorCero extends RuntimeException{
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public NoValorCero(String message) {
+    public NoValorNegativo(String message) {
         super(message);
     }
 
@@ -33,7 +32,7 @@ public class NoValorCero extends RuntimeException{
      *                unknown.)
      * @since 1.4
      */
-    public NoValorCero(String message, Throwable cause) {
+    public NoValorNegativo(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -50,7 +49,7 @@ public class NoValorCero extends RuntimeException{
      *              unknown.)
      * @since 1.4
      */
-    public NoValorCero(Throwable cause) {
+    public NoValorNegativo(Throwable cause) {
         super(cause);
     }
 
@@ -68,7 +67,7 @@ public class NoValorCero extends RuntimeException{
      *                           be writable
      * @since 1.7
      */
-    public NoValorCero(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public NoValorNegativo(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }

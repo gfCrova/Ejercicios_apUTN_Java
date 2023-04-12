@@ -1,16 +1,14 @@
-package Clase5_7_8;
+package Clase05_07_08;
 
-import Clase5_7_8.exceptions.NoValorCero;
-import Clase5_7_8.exceptions.NoValorNegativo;
+import Clase05_07_08.exceptions.NoValorCero;
+import Clase05_07_08.exceptions.NoValorNegativo;
 
-public class DescuentoPorcentaje extends Descuento{
+public class DescuentoFijo extends Descuento{
 
     private double valorDescuento;
 
-    public DescuentoPorcentaje() {}
-
-    public DescuentoPorcentaje(double valorDescPorcentaje) {
-        this.valorDescuento = valorDescPorcentaje;
+    public DescuentoFijo(double valorDescuento) {
+        this.valorDescuento = valorDescuento;
     }
 
     @Override
@@ -31,7 +29,6 @@ public class DescuentoPorcentaje extends Descuento{
         } if (getTotal - getValorDescuento() < 0) {
             throw new NoValorNegativo();
         }
-        double resultDescuento = (getTotal * this.valorDescuento) / 100;
-        return getTotal - resultDescuento;
+        return getTotal - getValorDescuento();
     }
 }

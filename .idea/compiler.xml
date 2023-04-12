@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Clase9" />
+        <module name="Clase09" />
         <module name="Clase10_Ej.Integrador" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Clase09" target="19" />
       <module name="Clase10_Ej.Integrador" target="19" />
-      <module name="Clase9" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

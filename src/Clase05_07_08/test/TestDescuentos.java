@@ -1,9 +1,7 @@
-package Clase5_7_8.test;
+package Clase05_07_08.test;
 
-import Clase5_7_8.*;
+import Clase05_07_08.*;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package Clase4;
+package Clase04;
 
 import java.io.File;
 import java.io.FileNotFoundException;

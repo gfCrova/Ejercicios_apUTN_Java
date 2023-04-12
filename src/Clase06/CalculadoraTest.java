@@ -1,4 +1,4 @@
-package Clase6;
+package Clase06;
 
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
