@@ -47,17 +47,6 @@ public class Materia {
                 puedeCursar = false;
             }
         }
-
         return puedeCursar;
-    }
-
-    public String grabarArchivo() {
-
-        String texto = nombre;
-
-        for (Materia materia : correlativas) {
-            texto += ";" + materia.getNombre();
-        }
-        return texto;
     }
 }

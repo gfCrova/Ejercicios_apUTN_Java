@@ -1,2 +1,6 @@
-package org.argPrograma.entities;public class InscripcionEnum {
+package org.argPrograma.entities;
+
+public enum InscripcionEnum {
+    APROBADA,
+    RECHAZADO
 }

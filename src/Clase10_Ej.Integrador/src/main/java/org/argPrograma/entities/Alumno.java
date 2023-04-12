@@ -50,14 +50,4 @@ public class Alumno {
     public void agregarMateriaAprobada(Materia materia) {
         materiasAprobadas.add(materia);
     }
-
-    public String grabarArchivo() {
-
-        String texto = nombre + ";" + legajo;
-
-        for (Materia materia : materiasAprobadas) {
-            texto += ";" + materia.getNombre();
-        }
-        return texto;
-    }
 }
