@@ -1,7 +1,7 @@
 Materias,Correlativas
-MatemáticaI
-FisicaI
-ProgramaciónI
+MatemáticaI,
+FisicaI,
+ProgramaciónI,
 MatemáticaII,MatemáticaI
 FisicaII,FisicaI
 ProgramaciónII,ProgramaciónI
