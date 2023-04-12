@@ -5,6 +5,6 @@ ProgramaciónI
 MatemáticaII,MatemáticaI
 FisicaII,FisicaI
 ProgramaciónII,ProgramaciónI
-MatemáticaIII,MatemáticaII MatemáticaI
-FisicaIII,FisicaII FisicaI
-ProgramaciónIII,ProgramaciónII ProgramaciónI
+MatemáticaIII,MatemáticaI MatemáticaII
+FisicaIII,FisicaI FisicaII
+ProgramaciónIII,ProgramaciónI ProgramaciónII
