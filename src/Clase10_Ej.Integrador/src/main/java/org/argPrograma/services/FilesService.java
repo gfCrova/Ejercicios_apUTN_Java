@@ -15,7 +15,7 @@ public class FilesService {
 
     private final String pathInscripciones = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\inscripciones.csv";
     private final String pathMaterias = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\materias.csv";
-    private final String pathAlumnos = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\outputFiles\\alumnos.csv";
+    private final String pathAlumnos = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\alumnos.csv";
 
     public List<String> leerInscripciones() throws IOException {
         Path file = Paths.get(pathInscripciones);
