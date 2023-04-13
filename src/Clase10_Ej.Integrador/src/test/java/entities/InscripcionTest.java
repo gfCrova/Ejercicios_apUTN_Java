@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 class InscripcionTest {
 
@@ -17,14 +18,11 @@ class InscripcionTest {
 
 
     @BeforeAll
-    public static void beforeAll() {
+    public static void beforeAll() throws IOException {
 
-        // Instanciar materias
         materia1 = new Materia("MatematicaI");
         materia2 = new Materia("MatematicaII");
         materia3 = new Materia("MatematicaIII");
-
-        // Instanciar correlativas
         materia2.agregarCorrelativa(materia1);
         materia3.agregarCorrelativa(materia1);
         materia3.agregarCorrelativa(materia2);
@@ -38,11 +36,11 @@ class InscripcionTest {
     @Test
     void aprobadaTrue() {
 
-        Alumno alumno3 = new Alumno("Matias", "20930");
-        alumno3.agregarMateriaAprobada(materia1);
-        alumno3.agregarMateriaAprobada(materia2);
+        Alumno alu = new Alumno("José", "6288");
+        alu.agregarMateriaAprobada(materia1);
+        alu.agregarMateriaAprobada(materia2);
+        Inscripcion inscripcion1 = new Inscripcion(alu, materia3 );
 
-        Inscripcion inscripcion1 = new Inscripcion(alumno3, materia3 );
         boolean estaAprobado = inscripcion1.aprobada();
         boolean valorEsperado = true;
         boolean resultado = ( estaAprobado == valorEsperado);
