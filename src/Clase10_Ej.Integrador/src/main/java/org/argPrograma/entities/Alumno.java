@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Alumno {
     private String nombre;
-    private String legajo;
+    private int legajo;
     private List<Materia> materiasAprobadas;
 
     public Alumno() {
     }
 
-    public Alumno(String nombre, String legajo) {
+    public Alumno(String nombre, int legajo) {
         this.nombre = nombre;
         this.legajo = legajo;
         this.materiasAprobadas = new ArrayList<Materia>();
     }
 
-    public Alumno(String nombre, String legajo, List<Materia> materiasAprobadas) {
+    public Alumno(String nombre, int legajo, List<Materia> materiasAprobadas) {
         this.nombre = nombre;
         this.legajo = legajo;
         this.materiasAprobadas = materiasAprobadas;
@@ -31,11 +31,11 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public String getLegajo() {
+    public int getLegajo() {
         return legajo;
     }
 
-    public void setLegajo(String legajo) {
+    public void setLegajo(int legajo) {
         this.legajo = legajo;
     }
 
@@ -49,5 +49,10 @@ public class Alumno {
 
     public void agregarMateriaAprobada(Materia materia) {
         materiasAprobadas.add(materia);
+    }
+
+    @Override
+    public String toString() {
+        return nombre + "," + legajo + "," + materiasAprobadas;
     }
 }

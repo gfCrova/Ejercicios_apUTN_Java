@@ -4,15 +4,18 @@ import java.util.Date;
 
 public class Inscripcion {
     private Alumno alumno;
-    private Materia materia;
+    private Materia materiaInscripcion;
+
+    private InscripcionEnum solicitud;
     private Date fechaInscripcion;
 
     public Inscripcion() {
     }
 
-    public Inscripcion(Alumno alumno, Materia materia) {
+    public Inscripcion(Alumno alumno, Materia materiaInscripcion, InscripcionEnum solicitud) {
         this.alumno = alumno;
-        this.materia = materia;
+        this.materiaInscripcion = materiaInscripcion;
+        this.solicitud = solicitud;
         this.fechaInscripcion = new Date();
     }
 
@@ -25,11 +28,11 @@ public class Inscripcion {
     }
 
     public Materia getMateria() {
-        return materia;
+        return materiaInscripcion;
     }
 
     public void setMateria(Materia materia) {
-        this.materia = materia;
+        this.materiaInscripcion = materia;
     }
 
     public Date getFechaInscripcion() {
@@ -41,6 +44,15 @@ public class Inscripcion {
     }
 
     public boolean aprobada() {
-        return materia.puedeCursar(alumno);
+        return materiaInscripcion.puedeCursar(alumno);
+    }
+
+    public String grabarArchivo() {
+        return alumno + "," + materiaInscripcion + "," + solicitud + "," + fechaInscripcion;
+    }
+
+    @Override
+    public String toString() {
+        return  materiaInscripcion.getNombre() + "," + fechaInscripcion;
     }
 }

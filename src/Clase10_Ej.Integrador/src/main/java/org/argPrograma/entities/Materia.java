@@ -49,4 +49,9 @@ public class Materia {
         }
         return puedeCursar;
     }
+
+    @Override
+    public String toString() {
+        return nombre + correlativas;
+    }
 }
