@@ -1,11 +1,18 @@
 package org.argPrograma.services;
 
+import org.argPrograma.entities.Alumno;
+import org.argPrograma.entities.Inscripcion;
+import org.argPrograma.entities.InscripcionEnum;
 import org.argPrograma.entities.Materia;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 public class FilesService {
@@ -16,6 +23,7 @@ public class FilesService {
     private final String pathInscripciones = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\inscripciones.csv";
     private final String pathMaterias = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\materias.csv";
     private final String pathAlumnos = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\inputFiles\\alumnos.csv";
+    private final String pathResultados = "src\\Clase10_Ej.Integrador\\src\\main\\java\\org\\argPrograma\\outputFiles\\resultadoInscripciones.csv";
 
     public List<String> leerInscripciones() throws IOException {
         Path file = Paths.get(pathInscripciones);
@@ -32,21 +40,8 @@ public class FilesService {
         return Files.readAllLines(file);
     }
 
-    public String buscarAlumnos(int legajo) throws IOException {
-        String lineaAlumno = "";
-        List<String> lineaAlumnos = leerAlumnos();
-
-        for (int i = 0; i < lineaAlumnos.size(); i++) {
-            if (i != 0) {
-                String lineas = lineaAlumnos.get(i);
-                int leg = Integer.parseInt(lineas.split(",")[1]);
-
-                if (leg == legajo) {
-                    lineaAlumno = lineas;
-                }
-            }
-        }
-        return lineaAlumno;
+    public void guardarResultados(Inscripcion inscripcion) throws IOException {
+        Files.writeString(Paths.get(pathResultados), inscripcion.grabarArchivo() + "\n", StandardOpenOption.APPEND);
     }
 
     public String buscarCorrelativa(String materia) throws IOException {
