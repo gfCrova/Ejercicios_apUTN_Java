@@ -1,7 +1,9 @@
 package org.argPrograma;
 
+import org.argPrograma.services.AlumnosService;
 import org.argPrograma.services.CorrelativasService;
 import org.argPrograma.services.FilesService;
+import org.argPrograma.services.InscripcionService;
 
 import java.io.IOException;
 
@@ -11,7 +13,7 @@ public class Main {
 
         FilesService fileServicio = new FilesService();
         CorrelativasService correlativasService = new CorrelativasService(fileServicio);
-
-        correlativasService.registrarInscripcion();
+        InscripcionService inscripcionService = new InscripcionService(fileServicio, correlativasService);
+        inscripcionService.registrarInscripcion();
     }
 }
