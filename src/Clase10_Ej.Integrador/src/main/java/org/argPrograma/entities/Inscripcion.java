@@ -12,6 +12,12 @@ public class Inscripcion {
     public Inscripcion() {
     }
 
+    public Inscripcion(Alumno alumno, Materia materiaInscripcion) {
+        this.alumno = alumno;
+        this.materiaInscripcion = materiaInscripcion;
+        this.fechaInscripcion = new Date();
+    }
+
     public Inscripcion(Alumno alumno, Materia materiaInscripcion, InscripcionEnum solicitud) {
         this.alumno = alumno;
         this.materiaInscripcion = materiaInscripcion;
