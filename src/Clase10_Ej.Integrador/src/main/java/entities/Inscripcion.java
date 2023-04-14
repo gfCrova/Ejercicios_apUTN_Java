@@ -1,5 +1,7 @@
 package org.argPrograma.entities;
 
+import org.argPrograma.InscripcionEnum;
+
 import java.util.Date;
 
 public class Inscripcion {

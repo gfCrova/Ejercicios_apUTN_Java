@@ -1,14 +1,8 @@
 package org.argPrograma.services;
 
-import org.argPrograma.entities.Alumno;
-import org.argPrograma.entities.Inscripcion;
-import org.argPrograma.entities.InscripcionEnum;
-import org.argPrograma.entities.Materia;
+import entities.Inscripcion;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
