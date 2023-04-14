@@ -36,10 +36,10 @@ class InscripcionTest {
     @Test
     void aprobadaTrue() {
 
-        Alumno alu = new Alumno("José", "6288");
+        Alumno alu = new Alumno("José", 6288);
         alu.agregarMateriaAprobada(materia1);
         alu.agregarMateriaAprobada(materia2);
-        Inscripcion inscripcion1 = new Inscripcion(alu, materia3 );
+        Inscripcion inscripcion1 = new Inscripcion(alu, materia3);
 
         boolean estaAprobado = inscripcion1.aprobada();
         boolean valorEsperado = true;
