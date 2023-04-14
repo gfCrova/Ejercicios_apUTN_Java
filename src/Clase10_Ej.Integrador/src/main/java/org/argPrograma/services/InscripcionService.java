@@ -29,13 +29,12 @@ public class InscripcionService {
                 int legajo = Integer.parseInt(linea.split(",")[1]);
                 String materiaInscripcion = linea.split(",")[2];
                 System.out.println("ALUMNO: " + alumno + ". LEGAJO: " + legajo + ".");
-                System.out.println("Solicita inscribirse a: " + materiaInscripcion);
+                System.out.println("Solicita inscribirse a: '" + materiaInscripcion + "'");
 
-                Materia mat = new Materia(materiaInscripcion);
-                correlativasService.buscarMateriasAprobadas(legajo);
+                Materia matInscripcion = new Materia(materiaInscripcion);
                 correlativasService.buscarCorrelativas(materiaInscripcion);
 
-                alumnosService.registrarAlumnos(alumno, legajo, mat, correlativasService.validarInscripcion());
+                alumnosService.registrarAlumnos(alumno, legajo, matInscripcion, correlativasService.buscarMateriasAprobadas(legajo), correlativasService.validarInscripcion());
                 System.out.println("\n");
             }
         }
