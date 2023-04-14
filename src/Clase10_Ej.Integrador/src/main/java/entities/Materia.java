@@ -1,4 +1,4 @@
-package org.argPrograma.entities;
+package entities;
 
 import java.util.ArrayList;
 import java.util.List;

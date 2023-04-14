@@ -1,4 +1,4 @@
-package org.argPrograma.entities;
+package entities;
 
 import org.argPrograma.InscripcionEnum;
 
