@@ -43,18 +43,4 @@ public class FilesService {
     public void guardarResultados(Inscripcion inscripcion) throws IOException {
         Files.writeString(Paths.get(pathResultados), inscripcion.grabarArchivo() + "\n", StandardOpenOption.APPEND);
     }
-
-    public String buscarCorrelativa(String materia) throws IOException {
-
-        String lineaMateria = "";
-
-        for (String linea : Files.readAllLines(Paths.get(pathMaterias))) {
-            String mat = linea.split(",")[0];
-            if (materia.equals(mat)) {
-                lineaMateria = linea;
-                return lineaMateria;
-            }
-        }
-        return lineaMateria;
-    }
 }
