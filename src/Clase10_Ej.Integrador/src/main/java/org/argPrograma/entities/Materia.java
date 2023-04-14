@@ -17,9 +17,7 @@ public class Materia {
         this.correlativas = correlativas;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() { return nombre; }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -52,6 +50,5 @@ public class Materia {
 
     @Override
     public String toString() {
-        return nombre + correlativas;
-    }
+        return nombre;}
 }
