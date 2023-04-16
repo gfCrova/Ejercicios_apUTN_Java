@@ -21,19 +21,26 @@ public class InscripcionService {
         List<String> lineas = fileServicio.leerInscripciones();
 
         for (int i = 0; i < lineas.size(); i++) {
+            String alumno;
+            int legajo;
+            String materiaInscripcion;
 
             if (i != 0) {
                 String linea = lineas.get(i);
-                String alumno = linea.split(",")[0];
-                int legajo = Integer.parseInt(linea.split(",")[1]);
-                String materiaInscripcion = linea.split(",")[2];
-                System.out.println("ALUMNO: " + alumno + ". LEGAJO: " + legajo + ".");
-                System.out.println("Solicita inscribirse a: '" + materiaInscripcion + "'");
+                alumno = linea.split(",")[0];
+                legajo = Integer.parseInt(linea.split(",")[1]);
+                materiaInscripcion = linea.split(",")[2];
 
+                System.out.println("ALUMNO: " + alumno + ". LEGAJO: " + legajo + ". INSCRIPCIÓN A: '" + materiaInscripcion + "'");
+
+                if (materiaInscripcion == null || materiaInscripcion.equals("")) {
+                    materiaInscripcion = "La materia no existe";
+                }
                 Materia matInscripcion = new Materia(materiaInscripcion);
                 correlativasService.buscarCorrelativas(materiaInscripcion);
 
                 alumnosService.registrarAlumnos(alumno, legajo, matInscripcion, correlativasService.buscarMateriasAprobadas(legajo), correlativasService.validarInscripcion());
+
                 System.out.println("\n");
             }
         }
