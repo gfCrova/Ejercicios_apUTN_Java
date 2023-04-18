@@ -1,6 +1,6 @@
 package org.argPrograma.services;
 
-import entities.Materia;
+import org.argPrograma.services.entities.Materia;
 
 import java.io.IOException;
 import java.util.List;

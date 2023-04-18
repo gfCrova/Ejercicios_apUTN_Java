@@ -1,9 +1,9 @@
 package org.argPrograma.services;
 
-import entities.Alumno;
-import entities.Inscripcion;
+import org.argPrograma.services.entities.Alumno;
+import org.argPrograma.services.entities.Inscripcion;
 import org.argPrograma.InscripcionEnum;
-import entities.Materia;
+import org.argPrograma.services.entities.Materia;
 
 import java.io.IOException;
 import java.util.ArrayList;
