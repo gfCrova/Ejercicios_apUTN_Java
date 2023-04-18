@@ -1,5 +1,8 @@
 package entities;
 
+import org.argPrograma.services.entities.Alumno;
+import org.argPrograma.services.entities.Inscripcion;
+import org.argPrograma.services.entities.Materia;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
